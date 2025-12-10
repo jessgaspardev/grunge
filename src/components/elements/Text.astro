@@ -16,8 +16,8 @@ const variantStyle = {
     sm: "text-16 font-mono text-base-900",
     md: "text-20 font-mono font-semibold uppercase text-base-700",
     lg: "text-32 font-grunge text-base-900",
-    xl: "text-40 font-grunge text-base-900"
+    xl: "text-40/10 font-grunge text-base-900"
 }
 ---
 
-<p class:list={[baseStyle, variantStyle[variant]]} {...rest}><slot /></p>
+<p class:list={[baseStyle, variantStyle[variant], className]} {...rest}><slot /></p>

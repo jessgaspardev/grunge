@@ -1,0 +1,27 @@
+---
+// components
+import Container from "../../elements/Container.astro"
+import Text from "../../elements/Text.astro"
+import Heading from "../../elements/Heading.astro"
+import ImageContainer from "../../elements/ImageContainer.astro"
+import Link from "../../elements/Link.astro"
+
+// assets
+import peter from "../../../assets/images/peter.jpg";
+---
+
+<Container variant={"w80"} class="h-dvh pt-28">
+    <Container variant={"w33"}>
+        <Text variant={'xl'}>Hey there! I specialize in crafting unique, eye-catching designs that help small businesses like yours stand out in a crowded market.</Text>
+    </Container>
+    <Container class="flex items-end gap-8 h-9/12">
+        <Container class="flex-2">
+            <Link variant={'button'} href="/contact">Available for work</Link>
+            <Heading tagName="h1" tagSize="h1">Peter Jones</Heading>
+        </Container>
+        <Container class="h-full flex-1">
+            <ImageContainer src={peter} alt="Peter Jones"></ImageContainer>
+        </Container>
+    </Container>
+</Container>
+

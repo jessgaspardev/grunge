@@ -1,0 +1,11 @@
+---
+import { Image } from "astro:assets";
+import barCode from "../../assets/ui/barcode.svg";
+const {src, alt} = Astro.props;
+---
+<div class="flex flex-col items-end gap-2 h-full">
+    <Image src={barCode} alt="Bar Code" />
+    <div class="p-4 border-2 border-base-900 h-full">
+        <Image src={src} alt={alt} class="w-full h-full object-cover grayscale-75"/>
+    </div>
+</div>

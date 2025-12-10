@@ -1,0 +1,27 @@
+---
+// components
+import Container from "../../elements/Container.astro";
+import Heading from "../../elements/Heading.astro";
+import WorkCard from "../../cards/WorkCard.astro";
+
+import { getCollection } from "astro:content";
+const works = await getCollection("works");
+const featuredWorks = works.filter(work => work.data.isFeatured === true);
+---
+
+<Container variant={'w66'} class='flex flex-col gap-12'>
+    <Heading tagName="h2" tagSize="h2" class="text-center">
+        Featured Works
+    </Heading>
+    <Container class="grid grid-cols-2 gap-4">
+        {featuredWorks.map((work) => (
+            <WorkCard
+                slug={work.data.slug}
+                featuredImage={work.data.featuredImage}
+                title={work.data.title}
+                client={work.data.client}>
+            </WorkCard>
+        ))
+        }
+    </Container>
+</Container>

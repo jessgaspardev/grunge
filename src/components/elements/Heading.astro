@@ -2,12 +2,12 @@
 import type { HTMLAttributes } from "astro/types";
 
 const headingOptions = {
-    h1: 'text-216',
-    h2: 'text-128',
-    h3: 'text-80',
-    h4: 'text-48',
-    h5: 'text-32',
-    h6: 'text-24'
+    h1: 'lg:text-216 md:text-128 text-80',
+    h2: 'lg:text-128 md:text-80 text-48',
+    h3: 'lg:text-80 md:text-48 text-40',
+    h4: 'lg:text-48 md:text-40 text-32',
+    h5: 'lg:text-32 md:text-24 text-20',
+    h6: 'lg:text-24 md:text-20 text-16'
 };
 
 interface Props extends HTMLAttributes<'h1'> {
@@ -19,7 +19,7 @@ const { tagName, tagSize, class: className, ...rest} = Astro.props;
 const Tag = tagName;
 
 // common style for all headings
-const baseStyle = "font-grunge uppercase text-base-900 tracking-tight";
+const baseStyle = "font-grunge uppercase text-base-900 tracking-tight leading-none";
 ---
 
 <Tag class:list={[baseStyle, headingOptions[tagSize], className]} {...rest}><slot /></Tag>

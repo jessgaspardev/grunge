@@ -1,0 +1,19 @@
+---
+// assets
+import { Image } from "astro:assets";
+
+// components
+import Text from "../elements/Text.astro";
+import Heading from "../elements/Heading.astro";
+
+
+const { slug, featuredImage, title, client } = Astro.props;
+---
+
+<div class="flex flex-col gap-4">
+    <a href={slug}>
+        <Image src={featuredImage} alt={title} height={390}/>
+        <Heading tagName="h3" tagSize="h4">{title}</Heading>
+        <Text variant={'md'}>{client}</Text>
+    </a>
+</div>
