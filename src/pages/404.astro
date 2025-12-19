@@ -1,0 +1,21 @@
+---
+// layout
+import Layout from "../layouts/Layout.astro";
+
+// components
+import Container from "../components/elements/Container.astro";
+import Heading from "../components/elements/Heading.astro";
+import Text from "../components/elements/Text.astro";
+import Link from "../components/elements/Link.astro";
+---
+
+<Layout title = "Page Not Found">
+    <Container variant={'xl'} class="text-center flex items-center">
+        <div class="flex flex-col gap-4">
+            <Heading tagName="h1" tagSize="h1">Page Not Found</Heading>
+            <Text variant={'xl'} class="text-base-900">Oops! It seems the page you are trying to access is broken or does not exist!</Text>    
+        </div>
+        
+        <Link variant={'button'} href="/">Go back to the homepage</Link>
+    </Container>
+</Layout>

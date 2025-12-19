@@ -17,14 +17,14 @@ const { slug, featuredImage, title, client, category } = Astro.props;
 
 <div class="group m-auto">
     <a href=`/works/${slug}`>
-        <div class="relative xl:w-[350px] xl:h-[350px] lg:w-[300px] lg:h-[300px] md:w-[400px] md:h-[400px] sm:w-[350px] sm:h-[350px] w-[230px] h-[230px] overflow-visible mb-4">
+        <div class="relative xl:w-[350px] xl:h-[350px] lg:w-[300px] lg:h-[300px] md:w-[400px] md:h-[400px] sm:w-[250px] sm:h-[250px] w-[200px] h-[200px] overflow-visible mb-4">
             <div class="absolute top-2 left-2 z-40 bg-base-900 border-2 border-base-100 px-4 flex gap-2">
                 <Text variant={'lg'} class="text-base-100">{category}</Text>
                 <Image src={symbol} alt="UI Symbol" width={30} loading="lazy"/>
             </div>
             <div style=`background-image: url(${vinylTexture.src})` class="absolute inset-0 bg-cover opacity-40 z-30"></div>
-            <Image src={featuredImage} alt={title} class="relative w-full h-full object-cover z-20" loading="lazy"/>
-            <div style=`background-image: url(${vinylDisk.src})` class="absolute top-0 -right-12 bg-cover z-0 xl:w-[350px] xl:h-[350px] lg:w-[300px] lg:h-[300px] md:w-[400px] md:h-[400px] sm:w-[350px] sm:h-[350px] w-[230px] h-[230px] transition-all duration-500 ease-in-out group-hover:-right-24 animate-spin"></div>
+            <Image src={featuredImage} alt={title} class="relative w-full h-full object-cover z-20" loading="lazy" width={400}/>
+            <div style=`background-image: url(${vinylDisk.src})` class="absolute top-0 -right-12 bg-cover z-0 xl:w-[350px] xl:h-[350px] lg:w-[300px] lg:h-[300px] md:w-[400px] md:h-[400px] sm:w-[250px] sm:h-[250px] w-[200px] h-[200px] transition-all duration-500 ease-in-out group-hover:-right-24 animate-spin"></div>
         </div>
         <Heading tagName="h3" tagSize="h4" class="group-hover:underline">{title}</Heading>
         <Text variant={'md'}>{client}</Text>
