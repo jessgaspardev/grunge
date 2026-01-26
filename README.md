@@ -24,8 +24,8 @@ Grunge is a portfolio Astro theme with a grunge aesthetic, perfect for developer
 - Ongoing updates
 
 If you have any questions, feel free to reach out:
-- Twitter: @_gasparjs
-- Email: jessgaspardev@gmail.com
+- [Bluesky](https://bsky.app/profile/gasparjs.bsky.social)
+- [jessgaspardev@gmail.com](mailto:jessgaspardev@gmail.com)
 
 
 ## 🚀 Project Structure
@@ -52,7 +52,7 @@ Inside of your template, you'll see the following folders and files:
 │   │   │   └── Dropdown.astro
 │   │   │   └── ResumeDropdown.astro
 │   │   │   └── Work.astro
-│   │   ├── global       # elements used on very page
+│   │   ├── global       # elements used on every page
 │   │   │   └── BaseHead.astro
 │   │   │   └── Footer.astro
 │   │   │   └── Navigation.astro
