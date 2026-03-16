@@ -1,11 +1,70 @@
 ---
-// components
 import Container from "../../elements/Container.astro"
-import ContactItem from "./ContactItem.astro"
 ---
-<Container variant={'md'}>
-    <div class="flex lg:flex-row flex-col gap-8 text-base-900">
-        <ContactItem title="Email" contact="peterjones@email.com" />
-        <ContactItem title="Phone" contact="(555) 123-4567" />
-    </div>
+
+<!--
+    DEVELOPER NOTE — FABFORM.IO INTEGRATION
+    This section replaces static contact details with a working contact form
+    powered by FabForm.io.
+
+    WHAT FABFORM.IO DOES
+    Astro generates static HTML by default, so forms cannot submit anywhere
+    unless a backend endpoint exists. FabForm.io provides that backend by giving
+    you a unique form URL that accepts submissions and stores them securely.
+
+    HOW TO USE FABFORM
+    1. Create a form endpoint at https://fabform.io
+    2. Copy your unique form URL (example: https://fabform.io/f/your-form-id)
+    3. Paste that URL into the <form action="..."> attribute below
+    4. Ensure each input has a valid `name` attribute
+-->
+
+<Container variant="md">
+    <form 
+        action="https://fabform.io/f/REPLACE_WITH_YOUR_FORM_ID"
+        method="POST"
+        class="flex flex-col gap-8 text-base-900"
+    >
+        <div class="flex flex-col gap-4">
+            <label for="name" class="font-semibold">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="border border-base-700 bg-base-50 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-base-900"
+            />
+        </div>
+
+        <div class="flex flex-col gap-4">
+            <label for="email" class="font-semibold">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="you@example.com"
+                class="border border-base-700 bg-base-50 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-base-900"
+            />
+        </div>
+
+        <div class="flex flex-col gap-4">
+            <label for="message" class="font-semibold">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="border border-base-700 bg-base-50 p-3 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-base-900"
+            ></textarea>
+        </div>
+
+        <button
+            type="submit"
+            class="bg-base-900 text-base-50 py-3 px-6 rounded-md hover:bg-base-700 transition"
+        >
+            Send Message
+        </button>
+    </form>
 </Container>
+
