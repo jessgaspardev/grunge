@@ -2,7 +2,6 @@
 Grunge is a portfolio Astro theme with a grunge aesthetic, perfect for developers, designers and any other creative who wants to stand out and show their love for the 90s music scene.
 
 - [**Live Demo**](https://grunge.pages.dev) 
-- [**Changelog**](https://jessgaspar.dev/changelog/grunge) 
 
 ## Tech stack
 - Astro v6
@@ -28,6 +27,7 @@ Grunge is a portfolio Astro theme with a grunge aesthetic, perfect for developer
 - Ongoing updates
 
 If you have any questions, feel free to reach out:
+- [Twitter](https://x.com/_gasparjs)
 - [Bluesky](https://bsky.app/profile/gasparjs.bsky.social)
 - [jessgaspardev@gmail.com](mailto:jessgaspardev@gmail.com)
 
